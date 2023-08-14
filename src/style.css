@@ -31,3 +31,10 @@ button:hover {
 #game-cards {
   display: flex;
 }
+
+#result button {
+  margin-top: 10px;
+  border: 2px solid hotpink;
+  border-radius: 50%;
+  background-color: rgba(247, 152, 152, 0.3);
+}
