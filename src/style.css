@@ -1,1 +1,33 @@
 @import url(./reset.css); 
+
+body {
+  background-color: pink;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 60px;
+}
+button:hover {
+  background-color: hotpink;
+  border-radius: 50%;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#center > h1 {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#game-cards {
+  display: flex;
+}

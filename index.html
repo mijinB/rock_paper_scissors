@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css" />
-    <title>mini game</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>mini game</title>
+</head>
+
+<body>
+  <div id="center">
     <h1>Rock Paper Scissors</h1>
-    <script src="./src/index.js"></script>
-  </body>
+    <div id="game-cards">
+      <button id="rock">&#x270A</button>
+      <button id="paper">&#x270B</button>
+      <button id="scissors">&#x270C</button>
+    </div>
+    <div id="result">
+      <button></button>
+      <p></p>
+    </div>
+  </div>
+  <script src="./src/index.js"></script>
+</body>
+
 </html>
