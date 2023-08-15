@@ -9,7 +9,7 @@
 <b>승자는?!</b>
 
 <br><br>
-<p font-size="15px">➕</p>
+<p style="font-size="15px"">➕</p>
 <br><br>
 
 <i>
