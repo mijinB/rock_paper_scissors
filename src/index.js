@@ -32,3 +32,35 @@ const onGameStart = (event) => {
 }
 
 gameCards.addEventListener("click", onGameStart);
+
+const endNumInput = document.querySelector("#end-div input");
+const chooseNumInput = document.querySelector("#choose-div input");
+const playButton = document.querySelector("#choose-div button");
+const hiddenDiv = document.querySelector("#hidden-div");
+const hiddenFirstText = hiddenDiv.firstElementChild;
+const hiddenSecondText = hiddenDiv.lastElementChild;
+
+let endNum;
+let chooseNum;
+
+const onEndNumChange = (event) => {
+  endNumInput.value = event.target.value.replace("-", "");
+  endNum = parseInt(endNumInput.value);
+}
+
+const onChooseNumChange = (event) => {
+  chooseNumInput.value = event.target.value.replace("-", "");
+  chooseNum = parseInt(chooseNumInput.value);
+}
+
+const onPlayButtonClick = () => {
+  const machineChooseNum = Math.ceil(Math.random() * endNum);
+  hiddenDiv.classList.remove("hidden");
+
+  hiddenFirstText.innerText = `당신의 선택: ${chooseNum}, 컴퓨터의 선택: ${machineChooseNum}.`;
+  hiddenSecondText.innerText = (chooseNum === machineChooseNum) ? "✔승!😝" : "✔패😔";
+}
+
+endNumInput.addEventListener("change", onEndNumChange);
+chooseNumInput.addEventListener("change", onChooseNumChange);
+playButton.addEventListener("click", onPlayButtonClick);

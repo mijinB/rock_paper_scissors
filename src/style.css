@@ -10,8 +10,25 @@ button {
   font-size: 60px;
 }
 button:hover {
-  background-color: hotpink;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.bold {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
 }
 
 #center {
@@ -21,18 +38,12 @@ button:hover {
   align-items: center;
   height: 100vh;
 }
-#center > h1 {
-  margin-bottom: 30px;
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
-}
 
 #result button {
   margin-top: 10px;
-  border: 2px solid hotpink;
+  border: 2px solid white;
   border-radius: 50%;
-  background-color: rgba(247, 152, 152, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 #result p {
   margin-top: 10px;
@@ -40,4 +51,14 @@ button:hover {
   text-align: center;
   font-size: 20px;
   font-weight: 600;
+}
+
+#end-div {
+  margin-bottom: 15px;
+}
+
+#play-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
