@@ -6,7 +6,11 @@
 </i>
 사람 vs 컴퓨터<br>
 🥁🥁🥁🥁🥁(두구두구두구)<br><br>
-<b>승자는?!</b><br><br>
+<b>승자는?!</b>
+
+<br><br>
+<p text-align="center">➕</p>
+<br><br>
 
 <i>
   <b>Random Number Game🎲</b><br>
