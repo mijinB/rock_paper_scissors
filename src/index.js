@@ -1,3 +1,22 @@
+const gamesButton = document.getElementById("games-button");
+const rpsGameButton = document.getElementById("rps-game-button");
+const randomGameButton = document.getElementById("random-game-button");
+const rockPaperScissorsDiv = document.getElementById("rock-paper-scissors");
+const randomNumberGameDiv = document.getElementById("random-number-game");
+
+const onGameChoice = (event) => {
+  const selectGame = event.target.innerText;
+  const isRandomGame = (selectGame === "🎲");
+
+  rpsGameButton.classList.toggle("selected-button", !isRandomGame);
+  rockPaperScissorsDiv.classList.toggle("hidden", isRandomGame);
+  
+  randomGameButton.classList.toggle("selected-button", isRandomGame);
+  randomNumberGameDiv.classList.toggle("hidden", !isRandomGame);
+}
+
+gamesButton.addEventListener("click", onGameChoice);
+
 const icons = ["❓", "✊", "✋️", "✌"];
 
 const gameCards = document.getElementById("game-cards")
@@ -34,33 +53,33 @@ const onGameStart = (event) => {
 gameCards.addEventListener("click", onGameStart);
 
 const endNumInput = document.querySelector("#end-div input");
-const chooseNumInput = document.querySelector("#choose-div input");
-const playButton = document.querySelector("#choose-div button");
+const choiceNumInput = document.querySelector("#choice-div input");
+const playButton = document.querySelector("#choice-div button");
 const hiddenDiv = document.querySelector("#hidden-div");
-const hiddenFirstText = hiddenDiv.firstElementChild;
-const hiddenSecondText = hiddenDiv.lastElementChild;
+const hiddenResultInfo = hiddenDiv.firstElementChild;
+const hiddenResult = hiddenDiv.lastElementChild;
 
 let endNum;
-let chooseNum;
+let choiceNum;
 
-const onEndNumChange = (event) => {
+const changeEndNum = (event) => {
   endNumInput.value = event.target.value.replace("-", "");
   endNum = parseInt(endNumInput.value);
 }
 
-const onChooseNumChange = (event) => {
-  chooseNumInput.value = event.target.value.replace("-", "");
-  chooseNum = parseInt(chooseNumInput.value);
+const changeChoiceNum = (event) => {
+  choiceNumInput.value = event.target.value.replace("-", "");
+  choiceNum = parseInt(choiceNumInput.value);
 }
 
-const onPlayButtonClick = () => {
-  const machineChooseNum = Math.ceil(Math.random() * endNum);
+const onGamePlay = () => {
+  const machineChoiceNum = Math.ceil(Math.random() * endNum);
   hiddenDiv.classList.remove("hidden");
 
-  hiddenFirstText.innerText = `당신의 선택: ${chooseNum}, 컴퓨터의 선택: ${machineChooseNum}.`;
-  hiddenSecondText.innerText = (chooseNum === machineChooseNum) ? "✔승!😝" : "✔패😔";
+  hiddenResultInfo.innerText = `당신의 선택: ${choiceNum}, 컴퓨터의 선택: ${machineChoiceNum}.`;
+  hiddenResult.innerText = (choiceNum === machineChoiceNum) ? "✔승!😝" : "✔패😔";
 }
 
-endNumInput.addEventListener("change", onEndNumChange);
-chooseNumInput.addEventListener("change", onChooseNumChange);
-playButton.addEventListener("click", onPlayButtonClick);
+endNumInput.addEventListener("change", changeEndNum);
+choiceNumInput.addEventListener("change", changeChoiceNum);
+playButton.addEventListener("click", onGamePlay);

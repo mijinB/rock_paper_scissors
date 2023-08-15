@@ -51,12 +51,6 @@ h1 {
   height: 100vh;
 }
 
-#rock-paper-scissors {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #result button {
   margin-top: 10px;
   border: 2px solid white;
