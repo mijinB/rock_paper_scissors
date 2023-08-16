@@ -8,6 +8,7 @@ const hiddenResult = hiddenDiv.lastElementChild;
 let endNum;
 let choiceNum;
 
+
 const changeEndNum = (event) => {
   endNumInput.value = event.target.value.replace("-", "");
   endNum = parseInt(endNumInput.value);
@@ -34,7 +35,7 @@ const onGamePlay = () => {
   const machineChoiceNum = Math.ceil(Math.random() * endNum);
   hiddenDiv.classList.remove("hidden");
 
-  hiddenResultInfo.innerText = `당신의 선택: ${choiceNum}, 컴퓨터의 선택: ${machineChoiceNum}.`;
+  hiddenResultInfo.innerHTML = `당신의 선택: ${choiceNum} <span class="battle">VS</span> 컴퓨터의 선택: ${machineChoiceNum}`;
   hiddenResult.innerText = (choiceNum === machineChoiceNum) ? "✔승!😝" : "✔패😔";
 }
 

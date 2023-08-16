@@ -30,6 +30,11 @@ h1 {
   font-weight: 600;
 }
 
+.battle {
+  color: red;
+  font-weight: 600;
+}
+
 .hidden {
   display: none !important;
 }
@@ -92,10 +97,17 @@ h1 {
 }
 
 #play-div {
+  margin-bottom: 18px;
+}
+#play-div p {
+  font-size: 17px;
+}
+
+#hidden-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#play-div p {
-  font-size: 17px;
+#hidden-div .bold {
+  margin-top: 8px;
 }
