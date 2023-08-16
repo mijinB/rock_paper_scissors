@@ -16,15 +16,18 @@ button:hover {
 
 h1 {
   margin-bottom: 30px;
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 28px;
 }
 
 .bold {
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.whiteText {
+  color: white;
+  font-weight: 600;
 }
 
 .hidden {
@@ -73,12 +76,26 @@ h1 {
 }
 
 /* randomNumberGame */
+#random-number-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #end-div {
+  margin-top: 10px;
   margin-bottom: 15px;
+}
+
+#choice-div {
+  margin-bottom: 20px;
 }
 
 #play-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#play-div p {
+  font-size: 17px;
 }

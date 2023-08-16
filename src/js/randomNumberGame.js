@@ -1,6 +1,6 @@
 const endNumInput = document.querySelector("#end-div input");
 const choiceNumInput = document.querySelector("#choice-div input");
-const playButton = document.querySelector("#choice-div button");
+const playButton = document.querySelector("#play-div button");
 const hiddenDiv = document.querySelector("#hidden-div");
 const hiddenResultInfo = hiddenDiv.firstElementChild;
 const hiddenResult = hiddenDiv.lastElementChild;
