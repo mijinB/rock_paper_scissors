@@ -51,6 +51,7 @@ h1 {
   height: 100vh;
 }
 
+/* rpsGame */
 #rock-paper-scissors {
   display: flex;
   flex-direction: column;
@@ -71,6 +72,7 @@ h1 {
   font-weight: 600;
 }
 
+/* randomNumberGame */
 #end-div {
   margin-bottom: 15px;
 }
