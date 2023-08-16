@@ -19,6 +19,18 @@ const changeChoiceNum = (event) => {
 }
 
 const onGamePlay = () => {
+  if(isNaN(endNum)) {
+    alert("범위를 입력해주세요.");
+    endNumInput.focus();
+    return;
+  }
+
+  if(isNaN(choiceNum)) {
+    alert("무슨 숫자가 나올 것 같나요?");
+    choiceNumInput.focus();
+    return;
+  }
+
   const machineChoiceNum = Math.ceil(Math.random() * endNum);
   hiddenDiv.classList.remove("hidden");
 
@@ -28,7 +40,7 @@ const onGamePlay = () => {
 
 const focusNextInputOnEnter = (event) => {
   if(event.key === "Enter") {
-    if(endNumInput.value !== "") {
+    if(!isNaN(endNum)) {
       choiceNumInput.focus();
     } else {
       alert("범위를 입력해주세요.");
@@ -38,7 +50,7 @@ const focusNextInputOnEnter = (event) => {
 
 const submitOnEnter = (event) => {
   if(event.key === "Enter") {
-    if(choiceNumInput.value !== "") {
+    if(!isNaN(choiceNum)) {
       onGamePlay();
     } else {
       alert("무슨 숫자가 나올 것 같나요?");
