@@ -1,4 +1,4 @@
-# mini game
+# mini games
 
 <br>
 <i>
