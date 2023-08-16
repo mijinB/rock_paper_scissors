@@ -80,6 +80,28 @@ const onGamePlay = () => {
   hiddenResult.innerText = (choiceNum === machineChoiceNum) ? "✔승!😝" : "✔패😔";
 }
 
-endNumInput.addEventListener("change", changeEndNum);
-choiceNumInput.addEventListener("change", changeChoiceNum);
+const focusNextInputOnEnter = (event) => {
+  if(event.key === "Enter") {
+    if(endNumInput.value !== "") {
+      choiceNumInput.focus();
+    } else {
+      alert("범위를 입력해주세요.");
+    }
+  }
+}
+
+const submitOnEnter = (event) => {
+  if(event.key === "Enter") {
+    if(choiceNumInput.value !== "") {
+      onGamePlay();
+    } else {
+      alert("무슨 숫자가 나올 것 같나요?");
+    }
+  }
+}
+
+endNumInput.addEventListener("input", changeEndNum);
+choiceNumInput.addEventListener("input", changeChoiceNum);
 playButton.addEventListener("click", onGamePlay);
+choiceNumInput.addEventListener("keydown", submitOnEnter);
+endNumInput.addEventListener("keydown", focusNextInputOnEnter);
